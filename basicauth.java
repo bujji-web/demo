@@ -1,3 +1,4 @@
+
 import java.net.URI;
 import java.util.function.Predicate;
 
@@ -17,6 +18,8 @@ public class basicauth {
 		WebDriver driver = new ChromeDriver(options);
 		/home/lavanya/pushdirectory/project/uifrontend/ptests/basicauth.java
 		Predicate<URI> uriPredicate = uri -> uri.getHost().contains("httpbin.org");
+                 Predicate<URI> uriPredicate = uri -> uri.getHost().contains("httpbin.org");
+
 
 		((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("foo", "bar"));
 		driver.get("http://httpbin.org/basic-auth/foo/bar");
